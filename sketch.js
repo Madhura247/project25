@@ -32,9 +32,10 @@ function draw() {
   
   Engine.update(engine);
 
+  paper.display();
   ground.display();
   dustbin.display();
-  paper.display();
+  
   //BottomBox.display();
   
   //RightBox.display();
@@ -45,6 +46,6 @@ function draw() {
 function keyPressed() {
   if (keyCode === UP_ARROW) {
     Matter.Body.setStatic(paper.body, false);
-      Matter.Body.applyForce(paper.body, paper.body.position, {x:100, y:-100})
+      Matter.Body.applyForce(paper.body, paper.body.position, {x:240, y:-240})
   }
 }
